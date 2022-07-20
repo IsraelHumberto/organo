@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CampoTexto.css'
 
 const CampoTexto = (props) => {
+
+  const digitando = (e) => {
+    props.aoAlterar(e.target.value)
+  }
+
+
   return (
     <div className='campo-texto'>
         <label>{props.label}</label>
-        <input placeholder={props.placeholder} required={props.required}/>
+        <input 
+        value={props.valor}
+        placeholder={props.placeholder} 
+        required={props.required}
+        onChange={digitando}
+        />
     </div>
   )
 }
