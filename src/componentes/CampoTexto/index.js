@@ -12,7 +12,7 @@ const CampoTexto = (props) => {
     <div className='campo-texto'>
         <label>{props.label}</label>
         <input 
-        value={props.valor}
+        value={props.value}
         placeholder={props.placeholder} 
         required={props.required}
         onChange={digitando}
